@@ -86,9 +86,11 @@ const LeadMagnet = () => {
                   ))}
                 </div>
 
-                <Button variant="hero" size="lg" className="w-full mt-8">
-                  Get Your Free Audit
-                  <ArrowRight className="h-4 w-4" />
+                <Button variant="hero" size="lg" className="w-full mt-8" asChild>
+                  <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
+                    Get Your Free Audit
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
                 </Button>
               </div>
             </div>

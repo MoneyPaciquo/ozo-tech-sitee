@@ -96,9 +96,12 @@ const Services = () => {
               <Button
                 variant={index === 1 ? "hero" : "heroOutline"}
                 className="w-full"
+                asChild
               >
-                Schedule Discovery Call
-                <ArrowRight className="h-4 w-4" />
+                <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
+                  Schedule Discovery Call
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </Button>
             </div>
           ))}

@@ -84,9 +84,12 @@ const Escalator = () => {
                   variant={item.highlight ? "hero" : "heroOutline"}
                   size="sm"
                   className="w-full"
+                  asChild
                 >
-                  {item.cta}
-                  <ArrowUpRight className="h-4 w-4" />
+                  <a href={item.tier === "Tier 3" ? "https://calendly.com/troy-ozotech/30min" : item.tier === "Tier 1" ? "#products" : "#services"} target={item.tier === "Tier 3" ? "_blank" : undefined} rel={item.tier === "Tier 3" ? "noopener noreferrer" : undefined}>
+                    {item.cta}
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
                 </Button>
 
                 {/* Arrow to next tier */}
