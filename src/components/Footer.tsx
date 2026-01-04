@@ -41,12 +41,16 @@ const Footer = () => {
             Join forward-thinking companies that trust Ozo.Tech to optimize their revenue operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg">
-              Start Your RevOps Journey
-              <ArrowRight className="h-4 w-4" />
+            <Button variant="hero" size="lg" asChild>
+              <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
+                Start Your RevOps Journey
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </Button>
-            <Button variant="heroOutline" size="lg">
-              Schedule a Demo
+            <Button variant="heroOutline" size="lg" asChild>
+              <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
+                Schedule a Demo
+              </a>
             </Button>
           </div>
         </div>

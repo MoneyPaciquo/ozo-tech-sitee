@@ -39,12 +39,16 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            <Button variant="hero" size="xl">
-              Start Your RevOps Audit
-              <ArrowRight className="h-5 w-5" />
+            <Button variant="hero" size="xl" asChild>
+              <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
+                Start Your RevOps Audit
+                <ArrowRight className="h-5 w-5" />
+              </a>
             </Button>
-            <Button variant="heroOutline" size="xl">
-              Explore Products
+            <Button variant="heroOutline" size="xl" asChild>
+              <a href="#products">
+                Explore Products
+              </a>
             </Button>
           </div>
 

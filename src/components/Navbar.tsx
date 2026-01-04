@@ -40,12 +40,16 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Book a Call
+            <Button variant="ghost" size="sm" asChild>
+              <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
+                Book a Call
+              </a>
             </Button>
-            <Button variant="hero" size="sm">
-              Get Started
-              <ArrowRight className="h-4 w-4" />
+            <Button variant="hero" size="sm" asChild>
+              <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </Button>
           </div>
 
@@ -72,12 +76,16 @@ const Navbar = () => {
               </a>
             ))}
             <div className="flex flex-col gap-2 mt-4">
-              <Button variant="heroOutline" size="sm">
-                Book a Call
+              <Button variant="heroOutline" size="sm" asChild>
+                <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
+                  Book a Call
+                </a>
               </Button>
-              <Button variant="hero" size="sm">
-                Get Started
-                <ArrowRight className="h-4 w-4" />
+              <Button variant="hero" size="sm" asChild>
+                <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
+                  Get Started
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </Button>
             </div>
           </div>
