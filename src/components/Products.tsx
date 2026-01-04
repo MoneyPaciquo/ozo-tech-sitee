@@ -1,13 +1,22 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, FileCheck, Map, BarChart3, Wrench, Sparkles, Database } from "lucide-react";
+import { ArrowRight, FileCheck, Map, BarChart3, Wrench, Sparkles, Database, ShoppingBag } from "lucide-react";
 
 const products = [
+  {
+    icon: ShoppingBag,
+    name: "The Shopify Growth Vault (SOPs & Templates)",
+    description: "The exact framework used to manage project descriptions and ops for brands under Pepads.com like NextLevel Labs.",
+    tag: "E-Commerce",
+    price: "$197",
+    comingSoon: true,
+  },
   {
     icon: FileCheck,
     name: "The Clean Slate Kit",
     description: "Comprehensive CRM data hygiene template and automation logic for spotless databases.",
     tag: "Data Hygiene",
     price: "$299",
+    comingSoon: false,
   },
   {
     icon: Map,
@@ -15,6 +24,7 @@ const products = [
     description: "Plug-and-play documentation suite for SDR/AE handoffs and go-to-market strategy.",
     tag: "Go-To-Market",
     price: "$399",
+    comingSoon: false,
   },
   {
     icon: BarChart3,
@@ -22,6 +32,7 @@ const products = [
     description: "Pre-built Looker Studio & HubSpot dashboard wireframes for SaaS metrics (LTV, CAC, Churn).",
     tag: "Analytics",
     price: "$249",
+    comingSoon: false,
   },
   {
     icon: Wrench,
@@ -29,6 +40,7 @@ const products = [
     description: "4-week guided implementation to transform your revenue operations from chaos to clarity.",
     tag: "Course",
     price: "$1,499",
+    comingSoon: false,
   },
   {
     icon: Sparkles,
@@ -36,6 +48,7 @@ const products = [
     description: "LLM-powered lead routing and data cleaning automation templates for modern stacks.",
     tag: "AI-Powered",
     price: "$599",
+    comingSoon: false,
   },
   {
     icon: Database,
@@ -43,6 +56,7 @@ const products = [
     description: "Self-assessment framework to identify if you're overpaying for software.",
     tag: "Free",
     price: "Free",
+    comingSoon: false,
   },
 ];
 
@@ -89,10 +103,16 @@ const Products = () => {
                 <span className={`font-semibold ${product.price === 'Free' ? 'text-primary' : ''}`}>
                   {product.price}
                 </span>
-                <Button variant="ghost" size="sm" className="group-hover:text-primary">
-                  Learn More
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
+                {product.comingSoon ? (
+                  <Button variant="outline" size="sm" className="text-primary border-primary/50">
+                    Join Waitlist
+                  </Button>
+                ) : (
+                  <Button variant="ghost" size="sm" className="group-hover:text-primary">
+                    Learn More
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                )}
               </div>
             </div>
           ))}
