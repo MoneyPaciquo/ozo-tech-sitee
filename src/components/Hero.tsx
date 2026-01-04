@@ -51,15 +51,16 @@ const Hero = () => {
           {/* Three Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-up" style={{ animationDelay: '0.4s' }}>
             {[
-              { icon: Target, label: "Strategy", desc: "Fractional Leadership" },
-              { icon: Zap, label: "Execution", desc: "Digital Products" },
-              { icon: TrendingUp, label: "Scale", desc: "Automations" },
+              { icon: Target, label: "RevOps", desc: "Fractional Revenue Operations for High-Growth Teams", tag: "WOMG Model" },
+              { icon: Zap, label: "E-Commerce", desc: "Content & Project Management for E-commerce Brands", tag: "NextLevel/PepAds Model" },
+              { icon: TrendingUp, label: "Bio-Ops", desc: "Infrastructure for Virtual Clinics", tag: "Phlebotomy/TRT Model" },
             ].map((pillar) => (
               <div
                 key={pillar.label}
                 className="group p-6 rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm hover:border-primary/50 hover:bg-card/50 transition-all duration-300"
               >
                 <pillar.icon className="h-8 w-8 text-primary mb-4 mx-auto group-hover:scale-110 transition-transform" />
+                <span className="inline-block text-xs font-mono text-primary/80 mb-2">{pillar.tag}</span>
                 <h3 className="font-semibold text-lg mb-1">{pillar.label}</h3>
                 <p className="text-sm text-muted-foreground">{pillar.desc}</p>
               </div>
