@@ -42,7 +42,15 @@ const About = () => {
                   NextLevel Labs
                 </a>
                 —driving content strategy, project management, and operational 
-                efficiency at scale.
+                efficiency at scale through frameworks proven at{" "}
+                <a 
+                  href="https://www.wrightonemedia.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  WOMG
+                </a>.
               </p>
             </div>
 
