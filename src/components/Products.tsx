@@ -93,16 +93,12 @@ const Products = () => {
 
               {/* CTA */}
               <div className="flex items-center justify-end mt-auto pt-4 border-t border-border/50">
-                {product.comingSoon ? (
-                  <Button variant="outline" size="sm" className="text-primary border-primary/50">
-                    Join Waitlist
-                  </Button>
-                ) : (
-                  <Button variant="ghost" size="sm" className="group-hover:text-primary">
-                    Learn More
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                )}
+                <Button variant={product.comingSoon ? "outline" : "ghost"} size="sm" className={product.comingSoon ? "text-primary border-primary/50" : "group-hover:text-primary"} asChild>
+                  <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
+                    {product.comingSoon ? "Join Waitlist" : "Learn More"}
+                    {!product.comingSoon && <ArrowRight className="h-4 w-4" />}
+                  </a>
+                </Button>
               </div>
             </div>
           ))}
