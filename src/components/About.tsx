@@ -17,40 +17,10 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Ozo.Tech was founded on the principle that modern businesses need 
-                operational infrastructure that scales. With hands-on experience 
-                managing operations for leading e-commerce and health-tech brands, 
-                we bring battle-tested strategies to every engagement.
+                Ozo.Tech was architected on a single conviction: scalable growth is a byproduct of superior operational infrastructure. We bridge the gap between creative ambition and bottom-line reality by delivering the "backbone" that powers award-winning strategy, high-velocity content, and immersive experiential media agencies.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Our portfolio includes managing operations for{" "}
-                <a 
-                  href="https://www.pepads.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-                >
-                  PepAds
-                </a>{" "}
-                and{" "}
-                <a 
-                  href="https://nextlevellabs.org/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-                >
-                  NextLevel Labs
-                </a>
-                —driving content strategy, project management, and operational 
-                efficiency at scale through frameworks proven at{" "}
-                <a 
-                  href="https://www.wrightonemedia.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-                >
-                  WOMG
-                </a>.
+                Our pedigree is built on hands-on leadership within the e-commerce, hospitality, and health-tech sectors. From orchestrating complex production workflows for global media houses to transforming fragmented digital guest journeys into high-output revenue engines, we specialize in the architectural rigor necessary for modern brands to thrive at scale.
               </p>
             </div>
 
