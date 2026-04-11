@@ -1,8 +1,8 @@
 const stats = [
-  { value: "10+", label: "Years Operating Experience" },
-  { value: "3", label: "Continents" },
-  { value: "6", label: "Platforms" },
-  { value: "$XM", label: "Client Revenue Influenced" },
+  { value: "10+", label: "Years in Market" },
+  { value: "5", label: "Continents" },
+  { value: "Cross-Industry", label: "Expertise" },
+  { value: "Trusted Across", label: "Technology · eCommerce · Media · Government · Emerging Markets" },
 ];
 
 const About = () => {
