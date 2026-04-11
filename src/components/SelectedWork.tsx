@@ -11,7 +11,7 @@ const cases = [
   },
   {
     title: "Email Marketing Infrastructure | Health & Wellness eCommerce",
-    description: "Built end-to-end email automation architecture for a peptide brand — welcome sequences, cart abandonment flows, post-purchase nurture, and list segmentation strategy.",
+    description: "Built end-to-end email automation architecture for market leaders in the telehealth and wellness space — welcome sequences, cart abandonment flows, post-purchase nurture, and list segmentation strategy.",
     result: "Automated revenue flows active across full customer lifecycle",
   },
 ];
