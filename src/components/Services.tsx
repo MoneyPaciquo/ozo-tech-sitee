@@ -1,108 +1,61 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, Cog, PieChart, Check } from "lucide-react";
-
 const services = [
   {
-    icon: Building2,
-    title: "Revenue Architecture",
-    subtitle: "From $0 to $10M",
-    description: "Designing and implementing your complete tech stack from the ground up. We build the infrastructure that scales with your growth.",
-    features: [
-      "Complete CRM implementation",
-      "Tech stack selection & integration",
-      "Data architecture design",
-      "Custom automation workflows",
-    ],
+    num: "01",
+    title: "Fractional RevOps",
+    description: "We embed inside your organization as your outsourced revenue operations function — aligning sales, marketing, and delivery into a single, accountable engine. CRM architecture, pipeline design, reporting infrastructure, and operational workflows built to scale.",
+    note: "Best for: Growth-stage companies, agencies, and pre-launch ventures",
   },
   {
-    icon: Cog,
-    title: "Sales Ops as a Service",
-    subtitle: "The Heavy Lifting",
-    description: "Handling the day-to-day CRM management, data hygiene, and operational tasks so your team can focus on selling.",
-    features: [
-      "Ongoing CRM administration",
-      "Lead routing optimization",
-      "Pipeline management",
-      "Process documentation",
-    ],
+    num: "02",
+    title: "Web Development & Digital Infrastructure",
+    description: "From concept to conversion-optimized build — we develop across Shopify, WooCommerce, Webflow, WordPress, and AI-assisted platforms. Every build is designed with one objective: turn visitors into revenue.",
+    note: "Platforms: Shopify · WooCommerce · Webflow · WordPress · Wix · Lovable",
   },
   {
-    icon: PieChart,
-    title: "Data Intelligence",
-    subtitle: "From Chaos to Clarity",
-    description: "Turning messy spreadsheets and scattered data into actionable board decks and executive insights.",
-    features: [
-      "Custom dashboard creation",
-      "Revenue forecasting",
-      "Cohort analysis",
-      "Board-ready reporting",
-    ],
+    num: "03",
+    title: "Email Marketing & Automation",
+    description: "We design, build, and manage the full email lifecycle — from welcome sequences to post-purchase flows. Revenue sitting in your list is revenue you haven't collected yet. We collect it.",
+    note: "Platforms: Omnisend · Brevo · Klaviyo",
+  },
+  {
+    num: "04",
+    title: "Go-To-Market Strategy",
+    description: "Whether you're launching a product, entering a new market, or scaling an existing offer — we build the GTM playbook that maps your path from zero to traction. Includes positioning, channel strategy, distributor pipeline, and launch sequencing.",
+    note: "Specialization: US market · Nigeria & West Africa · Emerging market entry",
+  },
+  {
+    num: "05",
+    title: "RFP & Bid Strategy",
+    description: "Government and institutional contracts represent some of the most consistent, high-value revenue available — and most companies leave them on the table. We research, strategize, and write competitive bid responses that position our clients to win.",
+    note: "Sectors: Government · Nonprofit · Healthcare · Education",
+  },
+  {
+    num: "06",
+    title: "Strategic Communications & Proposal Development",
+    description: "How you present is as important as what you offer. We craft the proposals, one-sheeters, capability decks, and outreach materials that open rooms — and close deals.",
+    note: "",
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 relative">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-primary text-sm font-medium uppercase tracking-wider">Fractional Services</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
-            The Fractional <span className="text-gradient">Model</span>
-          </h2>
-          <p className="text-muted-foreground">
-            Executive-level RevOps expertise without the executive-level salary. We become an extension of your team.
-          </p>
-        </div>
+    <section id="services" className="py-24">
+      <div className="max-w-7xl mx-auto px-6">
+        <p className="section-label">What We Do</p>
+        <h2 className="section-heading max-w-3xl">
+          A full-stack revenue operation — without the full-time overhead.
+        </h2>
+        <p className="text-muted-foreground text-lg mb-14 max-w-2xl">
+          We operate as a fractional extension of your team, deploying only what you need, exactly when you need it.
+        </p>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className={`relative p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-1 ${
-                index === 1
-                  ? "border-primary/50 bg-primary/5 shadow-[0_0_40px_hsl(180_100%_50%/0.1)]"
-                  : "border-border/50 card-gradient hover:border-primary/30"
-              }`}
-            >
-              {index === 1 && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-xs font-medium rounded-full bg-primary text-primary-foreground">
-                  Most Popular
-                </span>
-              )}
-
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                <service.icon className="h-7 w-7 text-primary" />
-              </div>
-
-              {/* Content */}
-              <h3 className="font-bold text-xl mb-1">{service.title}</h3>
-              <p className="text-primary text-sm font-medium mb-3">{service.subtitle}</p>
-              <p className="text-muted-foreground text-sm mb-6">{service.description}</p>
-
-              {/* Features */}
-              <ul className="space-y-3 mb-8">
-                {service.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm">
-                    <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA */}
-              <Button
-                variant={index === 1 ? "hero" : "heroOutline"}
-                className="w-full"
-                asChild
-              >
-                <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
-                  Schedule Discovery Call
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </Button>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((s) => (
+            <div key={s.num} className="bg-card border border-border/50 rounded-xl p-6 border-l-4 border-l-primary hover:border-l-primary/80 transition-all">
+              <span className="text-primary font-mono text-sm font-bold">{s.num}</span>
+              <h3 className="text-lg font-bold mt-2 mb-3">{s.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">{s.description}</p>
+              {s.note && <p className="text-xs text-muted-foreground/60 italic">{s.note}</p>}
             </div>
           ))}
         </div>

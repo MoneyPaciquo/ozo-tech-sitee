@@ -1,48 +1,37 @@
-import { User, Briefcase, Award } from "lucide-react";
+const stats = [
+  { value: "10+", label: "Years Operating Experience" },
+  { value: "3", label: "Continents" },
+  { value: "6", label: "Platforms" },
+  { value: "$XM", label: "Client Revenue Influenced" },
+];
 
 const About = () => {
   return (
-    <section id="about" className="py-24 relative">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <span className="text-sm font-mono text-primary mb-2 block">About</span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Operational Excellence, <span className="text-gradient">Delivered.</span>
-            </h2>
-          </div>
+    <section id="about" className="py-24 bg-card/50">
+      <div className="max-w-4xl mx-auto px-6">
+        <p className="section-label">About OZO.TECH</p>
+        <h2 className="section-heading">Built by operators. Run for founders.</h2>
 
-          {/* About Content */}
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <p className="text-muted-foreground leading-relaxed">
-                Ozo.Tech was architected on a single conviction: scalable growth is a byproduct of superior operational infrastructure. We bridge the gap between creative ambition and bottom-line reality by delivering the "backbone" that powers award-winning strategy, high-velocity content, and immersive experiential media agencies.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Our pedigree is built on hands-on leadership within the e-commerce, hospitality, and health-tech sectors. From orchestrating complex production workflows for global media houses to transforming fragmented digital guest journeys into high-output revenue engines, we specialize in the architectural rigor necessary for modern brands to thrive at scale.
-              </p>
-            </div>
+        <div className="space-y-6 text-muted-foreground text-lg leading-relaxed mb-16">
+          <p>
+            OZO.TECH is a fractional revenue operations firm headquartered in Los Angeles, with experience spanning North America, Europe, and emerging markets across West Africa.
+          </p>
+          <p>
+            We were built on a simple observation: the companies that win aren't always the ones with the best product. They're the ones with the best infrastructure — the systems, communications, and pipelines that turn potential into performance.
+          </p>
+          <p>
+            Our team brings cross-industry expertise across technology, eCommerce, media, government contracting, and international business. We work with a focused portfolio of clients at any given time — because depth of engagement matters more to us than volume.
+          </p>
+          <p className="text-foreground font-semibold">We don't chase accounts. We build partnerships.</p>
+        </div>
 
-            <div className="space-y-4">
-              {[
-                { icon: Briefcase, title: "E-Commerce Expertise", desc: "Project management and content operations for DTC brands." },
-                { icon: User, title: "Fractional Leadership", desc: "RevOps and Sales Ops for high-growth SaaS teams." },
-                { icon: Award, title: "Bio-Ops Infrastructure", desc: "Clinic operations and patient management systems." },
-              ].map((item) => (
-                <div 
-                  key={item.title}
-                  className="flex gap-4 p-4 rounded-lg border border-border/50 bg-card/30 backdrop-blur-sm"
-                >
-                  <item.icon className="h-6 w-6 text-primary shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold mb-1">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-border/50 pt-12">
+          {stats.map((s) => (
+            <div key={s.label} className="text-center">
+              <div className="text-3xl font-bold text-primary mb-1">{s.value}</div>
+              <div className="text-sm text-muted-foreground">{s.label}</div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
