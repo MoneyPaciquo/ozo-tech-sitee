@@ -14,7 +14,7 @@ const About = () => {
 
         <div className="space-y-6 text-muted-foreground text-lg leading-relaxed mb-16">
           <p>
-            OZO.TECH is a fractional revenue operations firm headquartered in Los Angeles, with experience spanning North America, Europe, and emerging markets across West Africa.
+            OZO.TECH is a fractional revenue operations firm headquartered in Los Angeles, with experience spanning North America, Europe, Australia, and emerging markets across West Africa.
           </p>
           <p>
             We were built on a simple observation: the companies that win aren't always the ones with the best product. They're the ones with the best infrastructure — the systems, communications, and pipelines that turn potential into performance.
