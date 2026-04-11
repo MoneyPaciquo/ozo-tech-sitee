@@ -14,11 +14,6 @@ const cases = [
     description: "Built end-to-end email automation architecture for a peptide brand — welcome sequences, cart abandonment flows, post-purchase nurture, and list segmentation strategy.",
     result: "Automated revenue flows active across full customer lifecycle",
   },
-  {
-    title: "Go-To-Market Strategy | AI Home Technology",
-    description: "Developed Nigeria and West Africa market entry strategy for a pre-launch AI home security device — identifying distribution channels, local payment infrastructure, diaspora acquisition strategy, and estate management partnerships.",
-    result: "Actionable 6-step international GTM roadmap delivered pre-launch",
-  },
 ];
 
 const SelectedWork = () => {
