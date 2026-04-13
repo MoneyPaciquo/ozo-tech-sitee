@@ -20,7 +20,7 @@ const Contact = () => {
         </Button>
         <p className="text-muted-foreground text-sm mt-6">
           Prefer email? Reach us at{" "}
-          <a href="mailto:hello@ozotech.io" className="text-primary hover:underline">hello@ozotech.io</a>
+          <a href="mailto:troy@ozotech.io" className="text-primary hover:underline">troy@ozotech.io</a>
         </p>
       </div>
     </section>
