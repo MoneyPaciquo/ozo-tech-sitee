@@ -15,8 +15,8 @@ const Insights = () => {
         <h2 className="section-heading">Thinking on revenue, operations, and growth.</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
-          {posts.map((post, i) => (
-            {post.url ? (
+          {posts.map((post, i) =>
+            post.url ? (
               <Link
                 key={i}
                 to={post.url}
@@ -38,8 +38,8 @@ const Insights = () => {
                   <span className="text-muted-foreground text-sm">Coming soon</span>
                 </div>
               </div>
-            )}
-          ))}
+            )
+          )}
         </div>
       </div>
     </section>
