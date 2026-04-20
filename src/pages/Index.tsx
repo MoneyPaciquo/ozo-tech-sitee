@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import FeaturedArticle from "@/components/FeaturedArticle";
 
 import WhyOzoTech from "@/components/WhyOzoTech";
 import Services from "@/components/Services";
@@ -16,7 +17,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
-      
+      <FeaturedArticle />
       <WhyOzoTech />
       <Services />
       <HowWeWork />
