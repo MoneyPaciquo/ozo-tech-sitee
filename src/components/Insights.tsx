@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const posts = [
   { title: "Why Fractional RevOps Is the Smartest Hire a Founder Can Make in 2026", url: "/blog/why-fractional-revops-smartest-hire-2026" },
@@ -11,10 +12,15 @@ const Insights = () => {
   return (
     <section id="insights" className="py-24 bg-card/50">
       <div className="max-w-7xl mx-auto px-6">
-        <p className="section-label">Insights</p>
-        <h2 className="section-heading">Thinking on revenue, operations, and growth.</h2>
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <p className="section-label">Latest Insights</p>
+          <h2 className="section-heading">Thinking on revenue, operations, and growth.</h2>
+          <p className="text-muted-foreground mt-4">
+            Stay ahead with insights on revenue operations and growth strategy.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {posts.map((post, i) =>
             post.url ? (
               <Link
@@ -40,6 +46,15 @@ const Insights = () => {
               </div>
             )
           )}
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <Button variant="hero" size="lg" asChild>
+            <Link to="/blog/why-fractional-revops-smartest-hire-2026">
+              Read Our Latest Article
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
