@@ -21,6 +21,8 @@ const Contact = () => {
         <p className="text-muted-foreground text-sm mt-6">
           Prefer email? Reach us at{" "}
           <a href="mailto:troy@ozotech.io" className="text-primary hover:underline">troy@ozotech.io</a>
+          {" "}or call{" "}
+          <a href="tel:+12096932711" className="text-primary hover:underline">(209) 693-2711</a>
         </p>
       </div>
     </section>

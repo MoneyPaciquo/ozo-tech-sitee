@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -37,7 +37,14 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-6">
+            <a
+              href="tel:+12096932711"
+              className="flex items-center gap-2 text-sm font-semibold text-primary hover:opacity-80 transition-opacity"
+            >
+              <Phone className="h-4 w-4" />
+              (209) 693-2711
+            </a>
             <Button size="sm" className="rounded-full" asChild>
               <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
                 Start a Conversation
@@ -58,6 +65,14 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="tel:+12096932711"
+              className="flex items-center gap-2 py-3 font-semibold text-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              <Phone className="h-4 w-4" />
+              (209) 693-2711
+            </a>
             <Button size="sm" className="rounded-full mt-4 w-full" asChild>
               <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
                 Start a Conversation <ArrowRight className="h-4 w-4 ml-1" />
