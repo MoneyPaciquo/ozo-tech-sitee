@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const services = [
   {
     num: "01",
@@ -56,6 +57,11 @@ const Services = () => {
               <h3 className="text-lg font-bold mt-2 mb-3">{s.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">{s.description}</p>
               {s.note && <p className="text-xs text-muted-foreground/60 italic">{s.note}</p>}
+              {s.num === "01" && (
+                <Link to="/fractional-revops" className="inline-block mt-4 text-primary text-sm font-medium hover:underline">
+                  Explore fractional RevOps →
+                </Link>
+              )}
             </div>
           ))}
         </div>
