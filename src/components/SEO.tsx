@@ -7,12 +7,30 @@ type SEOProps = {
   type?: "website" | "article";
   publishedAt?: string;
   author?: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 const SITE_URL = "https://www.ozotech.io";
 
-const SEO = ({ title, description, canonical, type = "website", publishedAt, author }: SEOProps) => {
+const SEO = ({ title, description, canonical, type = "website", publishedAt, author, image, imageAlt }: SEOProps) => {
   const url = canonical ? (canonical.startsWith("http") ? canonical : `${SITE_URL}${canonical}`) : SITE_URL;
+
+  const imageUrl = image ? (image.startsWith("http") ? image : `${SITE_URL}${image}`) : undefined;
+  const articleLd =
+    type === "article"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: title,
+          description,
+          ...(imageUrl ? { image: [imageUrl] } : {}),
+          ...(publishedAt ? { datePublished: publishedAt, dateModified: publishedAt } : {}),
+          author: { "@type": "Organization", name: "OZO.TECH", url: SITE_URL },
+          publisher: { "@type": "Organization", name: "OZO.TECH", url: SITE_URL },
+          mainEntityOfPage: { "@type": "WebPage", "@id": url },
+        }
+      : null;
 
   return (
     <Helmet>
@@ -29,6 +47,10 @@ const SEO = ({ title, description, canonical, type = "website", publishedAt, aut
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      {imageUrl && <meta property="og:image" content={imageUrl} />}
+      {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+      {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+      {articleLd && <script type="application/ld+json">{JSON.stringify(articleLd)}</script>}
 
       {type === "article" && publishedAt && (
         <meta property="article:published_time" content={publishedAt} />
