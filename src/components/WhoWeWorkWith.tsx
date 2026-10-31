@@ -33,7 +33,7 @@ const WhoWeWorkWith = () => {
               {c.avatar && (
                 <div className="flex items-center gap-4 mb-6">
                   <img
-                    src={c.avatar.url}
+                    src={c.avatar}
                     alt={c.alt}
                     loading="lazy"
                     className="h-20 w-20 rounded-full object-cover border border-primary/40 shrink-0"
