@@ -1,4 +1,4 @@
-import faithAvatar from "@/assets/faith-growth-stage-operator.webp.asset.json";
+import faithAvatar from "@/assets/faith-growth-stage-operator.webp";
 
 const clientTypes = [
   {
