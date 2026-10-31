@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import heroImg from "@/assets/blog/revops101-zho5RtgRzZi.webp.asset.json";
 import img1 from "@/assets/blog/revops101-RalUaNs1VTY.webp.asset.json";
 import img2 from "@/assets/blog/revops101-6mfe-iZBmBm.webp.asset.json";
 import img3 from "@/assets/blog/revops101-YFGhOe8FKCj.webp.asset.json";
 
-export const revops101HeroUrl = img1.url;
+export const revops101Hero = { url: heroImg.url, alt: "Electric cyan light streams converge across a near-black field, representing connected revenue operations" };
 
 export const revops101Content = (
 <>
