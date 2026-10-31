@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { revops101Content, revops101Hero } from "./posts/revops101";
 
 export type BlogPost = {
   slug: string;
@@ -11,9 +12,24 @@ export type BlogPost = {
   featured?: boolean;
   comingSoon?: boolean;
   content?: ReactNode;
+  heroImage?: { url: string; alt: string };
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "revops-101-beginners-guide-revenue-operations",
+    title: "RevOps 101: A Beginner's Guide to Mastering Revenue Operations",
+    excerpt:
+      "What RevOps is, why it matters, and a practical 90-day RevOps strategy for aligning sales, marketing and delivery around one revenue system.",
+    metaDescription:
+      "New to revenue operations? This beginner's guide explains what RevOps is, why it matters, and how to start aligning sales, marketing and delivery to grow revenue.",
+    date: "October 31, 2026",
+    publishedAt: "2026-10-31",
+    author: "Ozotech.io",
+    featured: true,
+    heroImage: revops101Hero,
+    content: revops101Content,
+  },
   {
     slug: "why-fractional-revops-smartest-hire-2026",
     title: "Why Fractional RevOps Is the Smartest Hire a Founder Can Make in 2026",
@@ -24,7 +40,6 @@ export const blogPosts: BlogPost[] = [
     date: "April 13, 2026",
     publishedAt: "2026-04-13",
     author: "Ozotech.io",
-    featured: true,
     content: (
       <>
         <p className="text-lg text-muted-foreground italic mb-8">

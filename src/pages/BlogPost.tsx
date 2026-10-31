@@ -19,12 +19,14 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title={`${post.title} | OZO.TECH Blog`}
+        title={post.heroImage ? post.title : `${post.title} | OZO.TECH Blog`}
         description={post.metaDescription}
         canonical={`/blog/${post.slug}`}
         type="article"
         publishedAt={post.publishedAt}
         author={post.author}
+        image={post.heroImage?.url}
+        imageAlt={post.heroImage?.alt}
       />
       <Navbar />
       <main className="pt-32 pb-24">
@@ -45,6 +47,14 @@ const BlogPost = () => {
             </h1>
           </header>
 
+          {post.heroImage && (
+            <img
+              src={post.heroImage.url}
+              alt={post.heroImage.alt}
+              className="w-full aspect-[16/9] object-cover rounded-xl border border-border/50 mb-10"
+            />
+          )}
+
           <div className="prose prose-invert max-w-none text-foreground leading-relaxed">
             {post.content}
           </div>
@@ -52,20 +62,23 @@ const BlogPost = () => {
           {/* CTA back to home */}
           <section className="mt-16 bg-card/50 border border-border/50 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold mb-3">
-              Ready to Fix the <span className="text-gradient">Leak</span>?
+              Ready to build your revenue engine?
             </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-              See how OZO.TECH helps growth-stage companies build the revenue infrastructure they need to scale.
+              Book a conversation with OZO.TECH about fractional RevOps. We will map where revenue is leaking and what to fix first.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="hero" size="lg" asChild>
+                <a href="https://calendly.com/troy-ozotech/30min" target="_blank" rel="noopener noreferrer">
+                  Start a Conversation <ArrowRight className="h-4 w-4 ml-1" />
+                </a>
+              </Button>
+              <Button variant="heroOutline" size="lg" asChild>
                 <Link to="/">
                   <Home className="h-4 w-4 mr-1" /> Back to Homepage
                 </Link>
               </Button>
-              <Button variant="heroOutline" size="lg" asChild>
-                <Link to="/blog">More Articles</Link>
-              </Button>
+
             </div>
           </section>
         </article>
