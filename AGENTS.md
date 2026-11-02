@@ -1,0 +1,2 @@
+# Project conventions
+- Import provider partner artwork through CDN asset pointers and preserve its original design and aspect ratio; use surrounding semantic-token backgrounds for contrast instead of recoloring the image.
