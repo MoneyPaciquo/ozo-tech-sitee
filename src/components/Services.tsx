@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import omnisendPartner from "@/assets/partners/omnisend-partner.png.asset.json";
 const services = [
   {
     num: "01",
@@ -57,6 +58,19 @@ const Services = () => {
               <h3 className="text-lg font-bold mt-2 mb-3">{s.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">{s.description}</p>
               {s.note && <p className="text-xs text-muted-foreground/60 italic">{s.note}</p>}
+              {s.num === "03" && (
+                <div className="mt-6 border-t border-border pt-4">
+                  <p className="text-xs font-semibold text-primary mb-3">Platform partners</p>
+                  <img
+                    src={omnisendPartner.url}
+                    alt="Official Omnisend Partners badge"
+                    width={2038}
+                    height={765}
+                    loading="lazy"
+                    className="block w-full max-w-56 h-auto object-contain bg-foreground rounded-md p-3"
+                  />
+                </div>
+              )}
               {s.num === "01" && (
                 <Link to="/fractional-revops" className="inline-block mt-4 text-primary text-sm font-medium hover:underline">
                   Explore fractional RevOps →
